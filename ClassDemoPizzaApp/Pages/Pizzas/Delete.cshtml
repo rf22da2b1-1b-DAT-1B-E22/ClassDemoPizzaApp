@@ -2,3 +2,34 @@
 @model ClassDemoPizzaApp.Pages.Pizzas.DeleteModel
 @{
 }
+<h1>Slet en Pizza</h1>
+
+<table class="table">
+    <thead>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Id</td>
+            <td>@Model.Pizza.Id</td>
+        </tr>
+        <tr>
+            <td>Navn</td>
+            <td>@Model.Pizza.Name</td>
+        </tr><tr>
+            <td>Pris</td>
+            <td>@Model.Pizza.Pris</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+<form method="post">
+    <div class="form-group">
+        <input type="submit" value="Slet Pizza" asp-page-handler="Slet" asp-route-id="@Model.Pizza.Id" class="btn btn-danger" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Fortryd" asp-page-handler="Fortryd" class="btn btn-primary" />
+    </div>
+</form>
