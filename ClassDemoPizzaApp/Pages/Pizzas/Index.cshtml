@@ -1,0 +1,32 @@
+﻿@page
+@model ClassDemoPizzaApp.Pages.Pizzas.IndexModel
+@{
+}
+
+<h1>Liste af Pizza</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Navn</th>
+            <th>Pris</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.Pizzaer)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                
+                <td>@p.Pris</td>
+                
+
+                @*<td><a asp-page="DeletePizza" asp-route-id="@p.Id">Delete</a></td>
+                |
+                <td><a asp-page="EditPizza" asp-route-id="@p.Id">Edit</a></td>*@
+            </tr>
+        }
+    </tbody>
+</table>
