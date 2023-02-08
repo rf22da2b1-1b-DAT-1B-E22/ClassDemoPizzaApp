@@ -11,6 +11,7 @@
             <th>Id</th>
             <th>Navn</th>
             <th>Pris</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -19,14 +20,16 @@
             <tr>
                 <td>@p.Id</td>
                 <td>@p.Name</td>
-                
                 <td>@p.Pris</td>
                 
-
-                @*<td><a asp-page="DeletePizza" asp-route-id="@p.Id">Delete</a></td>
-                |
-                <td><a asp-page="EditPizza" asp-route-id="@p.Id">Edit</a></td>*@
+                <td><a asp-page="Delete" asp-route-id="@p.Id">Delete</a> | <a asp-page="Edit" asp-route-id="@p.Id">Edit</a></td>
             </tr>
         }
     </tbody>
 </table>
+
+<p></p>
+<p></p>
+<form method="get">
+    <button asp-page="Create" class="btn btn-primary">Opret Pizza</button>
+</form>

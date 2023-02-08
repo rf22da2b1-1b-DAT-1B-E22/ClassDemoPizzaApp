@@ -38,5 +38,22 @@ namespace ClassDemoPizzaApp.services
 
             throw new KeyNotFoundException();
         }
+
+
+        public Pizza Create(Pizza pizza)
+        {
+            _liste.Add(pizza);
+            return pizza;
+        }
+
+        public Pizza Update(int id, Pizza pizza)
+        {
+            Pizza updatePizza = GetById(id); // kan kaste end KeyNotFoundException
+
+            int ix = _liste.IndexOf(updatePizza);
+            _liste[ix] = pizza;
+
+            return _liste[ix];
+        }
     }
 }
