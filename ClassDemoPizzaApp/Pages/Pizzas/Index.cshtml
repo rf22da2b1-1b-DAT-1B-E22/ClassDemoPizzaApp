@@ -1,4 +1,5 @@
 ﻿@page
+@using PizzaLib.model;
 @model ClassDemoPizzaApp.Pages.Pizzas.IndexModel
 @{
 }
@@ -12,6 +13,7 @@
             <th>Navn</th>
             <th>Pris</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +23,15 @@
                 <td>@p.Id</td>
                 <td>@p.Name</td>
                 <td>@p.Pris</td>
+                @if(p is PizzaEnum)
+                {
+                    PizzaEnum pe = p as PizzaEnum;
+                    <td>@pe.Slags</td>
+                }
+                else
+                {
+                    <td></td>
+                }
                 
                 <td><a asp-page="Delete" asp-route-id="@p.Id">Delete</a> | <a asp-page="Edit" asp-route-id="@p.Id">Edit</a></td>
             </tr>
