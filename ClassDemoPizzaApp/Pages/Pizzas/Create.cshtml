@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label>Pris</label><br>
-                <select id="Slags" name="Slags" asp-for="Slags" class="form-control">
+                <select   asp-for="Slags" class="form-control">
                     @foreach (var pt in Model.PizzaTyper)
                     {
                         <option value="@pt">@pt</option>

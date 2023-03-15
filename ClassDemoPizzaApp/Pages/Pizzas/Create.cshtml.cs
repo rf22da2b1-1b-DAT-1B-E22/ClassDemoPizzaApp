@@ -37,7 +37,6 @@ namespace ClassDemoPizzaApp.Pages.Pizzas
         public PizzaType Slags { get; set; }
 
         
-
         public List<PizzaType> PizzaTyper { get; set; }
 
 

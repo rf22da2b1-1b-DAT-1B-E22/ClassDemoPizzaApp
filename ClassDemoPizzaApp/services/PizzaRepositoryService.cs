@@ -2,6 +2,13 @@
 
 namespace ClassDemoPizzaApp.services
 {
+
+    /*
+     *  private int _id;
+     *  private string _name;
+     *  private double _pris;
+     * 
+     */
     public class PizzaRepositoryService : IPizzaRepositoryService
     {
         private List<Pizza> _liste = new List<Pizza>()
