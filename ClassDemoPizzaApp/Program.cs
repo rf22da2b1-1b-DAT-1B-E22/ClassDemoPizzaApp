@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // laver dependency injection
-builder.Services.AddSingleton<IPizzaRepositoryService, PizzaRepositoryServiceDB>();
+builder.Services.AddSingleton<IPizzaRepositoryService, PizzaRepositoryServiceDBEF>();
 
 
 var app = builder.Build();
